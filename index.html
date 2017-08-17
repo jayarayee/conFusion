@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
+<!-- Body of the Project -->
 <body>
   <nav class="navbar navbar-inverse navbar-toggleable-sm fixed-top">
     <div class="container">
@@ -35,7 +36,6 @@
     </div>
     </div>
   </nav>
-
   <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog" role="content">
       <div class="modal-content">
@@ -71,7 +71,6 @@
       </div>
     </div>
   </div>
-
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -84,13 +83,94 @@
                   <img src="img/logo.png" class="img-fluid" />
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                  <a type="button" class="btn btn-warning"
-                    data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                     data-placement="bottom" href="#reserveform">Reserven Table</a>
+                  <a data-toggle="model" data-target="#reserveform">
+                    <button type="button" class="btn btn-warning fa-lg">Reserven Table</button></a>
                 </div>
             </div>
         </div>
     </header>
+<!-- Model -->
+    <div id="reserveform" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="content">
+        <!-- Model Content  -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Reseve a Table</h4>
+            <button type="button" class="close"
+                data-dismiss="modal">
+                  &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline">
+                      <div class="form-group">
+                        <div class="form-check form-check-inline">
+                          <label class="sr-only" for="exampleInputEmail3">Number of Guest</label>
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2"> 2
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option3"> 3
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option4"> 4
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option5"> 5
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option6"> 6
+                          </label>
+                        </div>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Remember me
+                          </label>
+                      </div>
+                      <div class="form-group row">
+                        <label for="Dateandtime" class="col-md-2 col-form-label">Date and Time</label>
+                        <div class="col-5 col-sm-4 col-md-5">
+                          <div class='input-group date' id='datetimepicker1'>
+                            <span class="input-group-addon">
+                            <span class="fa fa-calendar"></span>
+                          </span>
+                              <input type='text' class="form-control" placeholder="Date"/>
+                          </div>
+                        </div>
+                        <div class="col-7 col-sm-6 col-md-5">
+                          <div class='input-group date' id='datetimepicker1'>
+                            <span class="input-group-addon">
+                            <span class="fa fa-clock-o" aria-hidden="true" id="time"></span>
+                          </span>
+                              <input type='text' class="form-control" placeholder="Time"/>
+
+                          </div>
+                      </div>
+                  </div>
+                      </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm">Reverse</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row row-content">
         <div class="col">
@@ -162,85 +242,7 @@
                 <h3>Meet our Culinary Specialists</h3>
             </div>
         </div>
-      <div>
-        <form>
-        <div class="col-12">
-              <div class="card">
-                  <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                  <div class="card-block">
-                      <dl class="row">
-                          <dd class="col-md-2 ">Number of Guests</dd>
-                          <dd class="row">
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                              </label>
-                            </div><div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2"> 2
-                              </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option3"> 3
-                              </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option4"> 4
-                              </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option5"> 5
-                              </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option6"> 6
-                              </label>
-                            </div>
-                          </dd>
-                     </dl>
-                     <!-- <dd class="col-6">Date and Time</dd>
-                     <!- <div class="container" style="margin:50px;"> -->
-                     <!-- <div class='col-sm-6'> -->
-              <div class="form-group row">
-                <label for="Dateandtime" class="col-md-2 col-form-label">Date and Time</label>
-                <div class="col-5 col-sm-4 col-md-5">
-                  <div class='input-group date' id='datetimepicker1'>
-                    <span class="input-group-addon">
-                    <span class="fa fa-calendar"></span>
-                  </span>
-                      <input type='text' class="form-control" placeholder="Date"/>
-                  </div>
-                </div>
-                <div class="col-7 col-sm-6 col-md-5">
-                  <div class='input-group date' id='datetimepicker1'>
-                    <span class="input-group-addon">
-                    <span class="fa fa-clock-o" aria-hidden="true" id="time"></span>
-                  </span>
-                      <input type='text' class="form-control" placeholder="Time"/>
-                      <!-- <script>
-                      $(function(){
-                        $(#datetimepicker1).datetimepicker1();
-                      });
-                      </script> -->
-                  </div>
-              </div>
-          </div>
-
-    <div class="form-group row">
-      <div class="offset-md-2 col-md-10">
-        <button type="submit" class="btn btn-primary">Reserve</button>
-      </div>
     </div>
-    </div>
-  </div>
-  </form>
-</div>
-</div>
-</div>
     <footer class="footer">
         <div class="container">
             <div class="row row-header">
@@ -255,14 +257,14 @@
                 </div>
                 <div class="col-6 col-sm-5">
                     <h5>Our Address</h5>
-                  <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              <i class="fa fa-phone fa-lg"></i> +852 1234 5678<br>
-		              <i class="fa fa-fax fa-lg"></i> +852 8765 4321<br>
-		              <i class="fa fa-envelope fa-lg"></i> <a href="mailto:confusion@food.net"> confusion@food.net</a>
-		           </address>
+                    <address>
+		                  121, Clear Water Bay Road<br>
+		                  Clear Water Bay, Kowloon<br>
+		                  HONG KONG<br>
+		                  <i class="fa fa-phone fa-lg"></i> +852 1234 5678<br>
+		                  <i class="fa fa-fax fa-lg"></i> +852 8765 4321<br>
+		                  <i class="fa fa-envelope fa-lg"></i> <a href="mailto:confusion@food.net"> confusion@food.net</a>
+		                </address>
                 </div>
                 <div class="col col-sm-4 align-self-center">
                     <div style="text-align: center">
